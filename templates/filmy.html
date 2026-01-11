@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Filmy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .movie-card {
+            background: #1e1e1e;
+            border-radius: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .movie-poster {
+            height: 260px;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        .badge-genre {
+            background: #ff6f61;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <h1 class="text-center mb-4">🎬 Moja Kolekcja Filmów</h1>
+    <p class="text-center text-light mb-5">
+        Ulubione filmy, które warto obejrzeć
+    </p>
+
+    <div class="row g-4">
+
+        <!-- FILM 1 -->
+        <div class="col-md-4">
+            <div class="movie-card">
+                <img src="https://picsum.photos/400/600?random=1" class="movie-poster w-100" alt="">
+                <div class="p-3">
+                    <h4>Incepcja</h4>
+                    <span class="badge badge-genre">Sci-Fi</span>
+                    <p class="mt-2 text-secondary">
+                        Thriller science fiction o snach we śnie i kradzieży tajemnic.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILM 2 -->
+        <div class="col-md-4">
+            <div class="movie-card">
+                <img src="https://picsum.photos/400/600?random=2" class="movie-poster w-100" alt="">
+                <div class="p-3">
+                    <h4>Gladiator</h4>
+                    <span class="badge badge-genre">Historyczny</span>
+                    <p class="mt-2 text-secondary">
+                        Historia rzymskiego generała, który zostaje gladiatorem.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILM 3 -->
+        <div class="col-md-4">
+            <div class="movie-card">
+                <img src="https://picsum.photos/400/600?random=3" class="movie-poster w-100" alt="">
+                <div class="p-3">
+                    <h4>Matrix</h4>
+                    <span class="badge badge-genre">Akcja</span>
+                    <p class="mt-2 text-secondary">
+                        Kultowy film o rzeczywistości będącej symulacją.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center mt-5 text-secondary">
+        © 2026 Moje Filmy • Django Project
+    </footer>
+
+</div>
+
+</body>
+</html>
