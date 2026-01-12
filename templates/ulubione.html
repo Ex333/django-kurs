@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ulubione filmy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .movie-card {
+            background-color: #1f2933;
+            border-radius: 14px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .movie-poster {
+            height: 260px;
+            object-fit: cover;
+            border-radius: 14px 14px 0 0;
+        }
+
+        .genre {
+            background-color: #ff7a18;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <h1 class="text-center mb-5">🎬 Ulubione filmy</h1>
+
+    <div class="row g-4">
+
+        <!-- FILM 1 -->
+        <div class="col-md-4">
+            <div class="movie-card">
+                <img src="https://picsum.photos/400/600?random=10" class="movie-poster w-100" alt="">
+                <div class="p-3">
+                    <h4>Incepcja</h4>
+                    <span class="badge genre">Sci-Fi</span>
+                    <p class="mt-2 text-secondary">
+                        Thriller science-fiction o snach w snach i kradzieży myśli.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILM 2 -->
+        <div class="col-md-4">
+            <div class="movie-card">
+                <img src="https://picsum.photos/400/600?random=11" class="movie-poster w-100" alt="">
+                <div class="p-3">
+                    <h4>Gladiator</h4>
+                    <span class="badge genre">Historyczny</span>
+                    <p class="mt-2 text-secondary">
+                        Epicka opowieść o honorze, zemście i walce na arenie.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILM 3 -->
+        <div class="col-md-4">
+            <div class="movie-card">
+                <img src="https://picsum.photos/400/600?random=12" class="movie-poster w-100" alt="">
+                <div class="p-3">
+                    <h4>Matrix</h4>
+                    <span class="badge genre">Akcja</span>
+                    <p class="mt-2 text-secondary">
+                        Kultowy film o świecie będącym symulacją komputerową.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center mt-5 text-secondary">
+        © 2026 • Moje ulubione filmy
+    </footer>
+
+</div>
+
+</body>
+</html>
