@@ -8,4 +8,5 @@ def ulubione(request):
     return render(request, "ulubione.html")
 
 def test(request):
-    return render(request, "test.html")
+    text = ["czekolada", "banan", "truskawka", "wanilia"]
+    return render(request, "test.html", {'text': text})
