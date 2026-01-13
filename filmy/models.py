@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Film(models.Model):
 
@@ -17,7 +18,16 @@ class Film(models.Model):
     rok_produkcji = models.PositiveSmallIntegerField(null=True, blank=True)
     kategoria = models.CharField(max_length=32, choices=Kategoria.choices)
     zdjecie = models.ImageField(upload_to="filmy/", null=True, blank=True)
-    imdb_rating = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    imdb_rating = models.DecimalField(
+    max_digits=3,            # np. 10.0
+    decimal_places=1,        # jedna cyfra po przecinku
+    null=True,
+    blank=True,
+    validators=[
+        MinValueValidator(1.0),
+        MaxValueValidator(10.0)
+    ]
+)
     def __str__(self):
         return self.tytul + str(self.rok_produkcji)
     
