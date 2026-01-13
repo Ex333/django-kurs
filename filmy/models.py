@@ -17,7 +17,7 @@ class Film(models.Model):
     rok_produkcji = models.PositiveSmallIntegerField(null=True, blank=True)
     kategoria = models.CharField(max_length=32, choices=Kategoria.choices)
     zdjecie = models.ImageField(upload_to="filmy/", null=True, blank=True)
-
+    imdb_rating = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     def __str__(self):
         return self.tytul + str(self.rok_produkcji)
     
