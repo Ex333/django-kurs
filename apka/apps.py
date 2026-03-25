@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
-
-class FilmyConfig(AppConfig):
-    name = 'filmy'
+class ApkaConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'apka'

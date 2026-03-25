@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Kontakt{% endblock %}
+
+{% block content %}
+<h1>Kontakt</h1>
+
+<form method="post" class="contact-form">
+    {% csrf_token %}
+
+    <div>
+        <label>Imię:</label>
+        {{ form.name }}
+        {{ form.name.errors }}
+    </div>
+
+    <div>
+        <label>Email:</label>
+        {{ form.email }}
+        {{ form.email.errors }}
+    </div>
+
+    <div>
+        <label>Wiadomość:</label>
+        {{ form.text }}
+        {{ form.text.errors }}
+    </div>
+
+    <button type="submit">Wyślij</button>
+</form>
+
+{% endblock %}
